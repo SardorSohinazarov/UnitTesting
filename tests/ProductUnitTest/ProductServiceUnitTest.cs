@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using MediatR;
+using Moq;
 using ProductAPI.Repositories;
 using ProductAPI.Services;
 
@@ -8,6 +9,7 @@ namespace ProductUnitTest
     {
         private readonly IProductService _productService;
         private readonly Mock<IProductRepository> _productRepositoryMock;
+        private readonly IMediator mediator;
 
         public ProductServiceUnitTest()
         {
